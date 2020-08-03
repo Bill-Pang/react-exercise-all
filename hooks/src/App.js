@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+// 在无状态组件中去声明一个useState;
 
 function App() {
+  const [num, setNum] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={addNum.bind(this)}>add</button>
+      <h1>点击了{num}次</h1>;
     </div>
   );
+  function addNum() {
+    return setNum(num + 1);
+  }
 }
 
 export default App;
