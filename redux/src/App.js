@@ -47,8 +47,11 @@ class App extends Component {
     // 可以把一些数据请求和处理都放入redux中进行处理
     // 算是一种规范，对于自动化测试也比较友好（暂时还没搞明白）。
     // 以前的action是对象，现在的action可以是函数
-    let action = actionMethods.GetMoodThunk();
-    store.dispatch(action);
+
+    // 之前：
+    store.dispatch(actionMethods.GetMoodThunk());
+    // 之后：
+    store.dispatch(actionMethods.GetMoodThunk());
   }
 }
 
